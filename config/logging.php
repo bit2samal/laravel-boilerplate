@@ -17,7 +17,7 @@ return [
     |
     */
 
-    'default' => env('LOG_CHANNEL', 'stack'),
+    'default' => env('LOG_CHANNEL', 'rollbar'),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,7 +37,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single', 'rollbar'],
+            'channels' => ['rollbar', 'single'],
             'ignore_exceptions' => false,
         ],
 
@@ -104,10 +104,7 @@ return [
             'driver' => 'monolog',
             'handler' => MonologHandler::class,
             'access_token' => env('ROLLBAR_TOKEN'),
-            'level' => 'debug',
-            'person_fn' => 'Auth::user',
-            'capture_email' => true, //optional
-            'capture_username' => true, //optional
+            'level' => 'debug'
         ],
     ],
 
