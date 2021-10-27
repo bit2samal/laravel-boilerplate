@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test_error', function () {
-    
-    return "Hi $call";
+    Log::debug('Test debug message');
+    return "Hi ";
     
 });
