@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test_error', function () {
+    echo $sack;
     Log::debug('Test debug message');
     return "Hi ";
     
