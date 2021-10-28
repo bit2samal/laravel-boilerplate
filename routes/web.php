@@ -19,7 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('/test_error', function () {
-    Log::debug('Test debug message');
+    throw new Exception("Test Error", 1);
+    // ('Test debug message');
     return "Hi ";
     
 });
