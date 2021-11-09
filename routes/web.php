@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test_error', function () {
-    \Log::debug('Test debug message');
+    Log::debug('Test debug message');
     return "Hi ";
     
 });
